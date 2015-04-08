@@ -1,0 +1,3 @@
+[submodule "lib/enml"]
+	path = lib/enml
+	url = git@github.com:DrWrong/ENML_PY.git
