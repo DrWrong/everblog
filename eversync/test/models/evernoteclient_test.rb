@@ -6,5 +6,7 @@ class EvernoteclientTest < ActiveSupport::TestCase
         # puts client.note_store
         # puts client.note_store.nil?
         assert_not client.note_store.nil?
+        assert_not client.user_store.nil?
+        puts client.user_store.getUser.username
      end
 end
