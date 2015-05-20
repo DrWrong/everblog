@@ -1,0 +1,9 @@
+development: &development
+    evernote:
+        customer_key: drwrong
+        customer_secret: f3d5cca73e181b78
+        sandbox: true
+        dev_token: S=s1:U=90936:E=154cb106587:C=14d735f3950:P=1cd:A=en-devtoken:V=2:H=7896228619c0a762c885a175b2fc1953
+
+test:
+    <<: *development
