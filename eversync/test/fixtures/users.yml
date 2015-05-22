@@ -1,7 +1,4 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  notebook_id: MyString
-
-two:
-  notebook_id: MyString
+  auth_token: S=s1:U=90936:E=154cb106587:C=14d735f3950:P=1cd:A=en-devtoken:V=2:H=7896228619c0a762c885a175b2fc1953

@@ -1,4 +1,5 @@
 development: &development
+    max_notes: 10
     evernote:
         customer_key: drwrong
         customer_secret: f3d5cca73e181b78
