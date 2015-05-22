@@ -89,18 +89,23 @@ class Evernoteclient
                 blog.update_sequence_num = note_metadata.updateSequenceNum
                 blog.user = get_evernote_user
                 # tag guid may be null
-                note_metadata.tagGuids.each do |tag_guid|
-                    tag = get_or_create_tag(tag_guid)
-                    blog.tags << tag
+                unless note_metadata.tagGuids.nil?
+                    note_metadata.tagGuids.each do |tag_guid|
+                        tag = get_or_create_tag(tag_guid)
+                        blog.tags << tag
+                    end
                 end
                 blog.content = get_content(guid)
                 blog.save
             else
                 unless blog.update_sequence_num.eql?(note_metadata.updateSequenceNum)
                     blog.content = get_content(guid)
-                    note_metadata.tagGuids.each do |tag_guid|
-                        unless blog.tags.include?(get_or_create_tag(tag_guid))
-                            blog.tags << tag
+                    unless note_metadata.tagGuids.nil?
+
+                        note_metadata.tagGuids.each do |tag_guid|
+                            unless blog.tags.include?(get_or_create_tag(tag_guid))
+                                blog.tags << tag
+                            end
                         end
                     end
                     blog.save
